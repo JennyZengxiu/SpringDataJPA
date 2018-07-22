@@ -1,8 +1,6 @@
 package com.example.employee.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Company {
@@ -13,7 +11,10 @@ public class Company {
     @Column
     Integer employeesNumber;
 
-    public Company(Integer id,String companyName,Integer employeesNumber){
+    public Company() {
+    }
+
+    public Company(Integer id, String companyName, Integer employeesNumber) {
         this.id = id;
         this.companyName = companyName;
         this.employeesNumber = employeesNumber;
